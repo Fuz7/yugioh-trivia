@@ -1,10 +1,11 @@
-import './App.css'
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router";
+import "./App.css";
 
 function App() {
+  return <main className="bg-image w-full h-screen bg-">
 
-  return (
-    <div  className='w-full min-h-screen bg-amber-50'></div>
-  )
+  <Outlet></Outlet>
+  </main>
 }
 
-export default App
+export default App;

@@ -1,1 +1,53 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'matrixIIBold';
+  src: url('@fonts/Matrix_II_Script_Bold.otf') format('truetype');
+}
+@font-face {
+  font-family: 'suiss-regular';
+  src: url('@fonts/SuisseIntlCondTrial-Regular.otf') format('truetype');
+}
+@font-face {
+  font-family: 'suiss-medium';
+  src: url('@fonts/SuisseIntlCondTrial-Medium.otf') format('truetype');
+}
+@font-face {
+  font-family: 'suiss-semi-bold';
+  src: url('@fonts/SuisseIntlCondTrial-SemiBold.otf') format('truetype');
+}
+@font-face {
+  font-family: 'suiss-bold';
+  src: url('@fonts/SuisseIntlCondTrial-Bold.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'matrix-book';
+  src: url('@fonts/Yu-Gi-Oh! Matrix Book.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'matrix-small-caps-2';
+  src: url('@fonts/Yu-Gi-Oh! Matrix Regular Small Caps 2.ttf') format('truetype');
+}
+
+
+
+@theme {
+  --color-background: #21212199;
+  --color-card: #161616E6;
+  --color-tertiary: #B7B7B7;
+  --color-border: #5C5C5C;
+  --color-white-text: #F1F1F1;
+  --color-border-2: #424242;
+  --color-choice-bg: #2D2D2D;
+  --color-icon: #919191;
+  --color-navbar: #101010;
+  --color-button-purple:#351455;
+  --font-matrixIIBold: 'matrixIIBold', sans-serif;
+  --font-suiss-regular: 'suiss-regular', sans-serif;
+  --font-suiss-medium: 'suiss-medium', sans-serif;
+  --font-suiss-semi-bold: 'suiss-semi-bold', sans-serif;
+  --font-suiss-bold: 'suiss-bold', sans-serif;
+  --font-matrix-book: 'matrix-book', sans-serif;
+  --font-matrix-small-caps-2: 'matrix-small-caps-2', sans-serif;
+}
