@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "description": "",
+  "main": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "wrangler dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "hono": "^4.12.23",
+    "wrangler": "^4.95.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260531.1",
+    "tsx": "^4.22.3"
+  }
+}

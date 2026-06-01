@@ -1,18 +1,18 @@
 import logo from "@images/Logo.png";
-import { Mail, LockKeyhole } from "lucide-react";
-import { cn } from "../../../../packages/web/utils/clsx";
-import { formInputStyling } from "../../../../packages/web/styling";
-import { Checkbox } from "../../../../packages/web/ui/Checkbox";
+import { Mail, LockKeyhole, SquareUser } from "lucide-react";
+import { cn } from "../../../utils/clsx";
+import { formInputStyling } from "../../../utils/styling"; 
+import { Checkbox } from "../../ui/Checkbox";
 
-function Login() {
+function Register() {
   return (
     <div className="w-full min-h-full flex justify-center items-center text-white">
-      <LoginForm />
+      <RegisterForm />
     </div>
   );
 }
 
-function LoginForm() {
+function RegisterForm() {
   return (
     <div
       className="flex-1 max-w-107.5 min-h-141.5 bg-card 
@@ -33,9 +33,9 @@ function LoginForm() {
           Test your dueling knowledge!
         </p>
       </div>
-      <div className="mt-25 flex flex-col w-full">
+      <div className="mt-8 flex flex-col w-full">
         <p className="font-suiss-medium text-xl text-white-text">
-          Welcome back, duelist
+          Begin Your Journey, Duelist
         </p>
         <form className="mt-4 flex flex-col w-full" action="">
           <div className="w-full min-h-10 relative">
@@ -53,6 +53,20 @@ function LoginForm() {
             />
           </div>
           <div className="w-full min-h-10 relative mt-1">
+            <SquareUser
+              className="absolute top-1/2 -translate-y-1/2 left-3 w-4.5 h-4.5"
+              color="#919191"
+            />
+            <input
+              id="username"
+              name="username"
+              autoComplete="username"
+              className={cn(formInputStyling)}
+              type="text"
+              placeholder="Username"
+            />
+          </div>
+          <div className="w-full min-h-10 relative mt-1">
             <LockKeyhole
               className="absolute top-1/2 -translate-y-1/2 left-3 w-4.5 h-4.5"
               color="#919191"
@@ -60,34 +74,41 @@ function LoginForm() {
             <input
               id="password"
               name="password"
-              autoComplete="current-password"
+              autoComplete="new-password"
               className={cn(formInputStyling)}
               type="password"
               placeholder="Password"
             />
           </div>
+          <div className="w-full min-h-10 relative mt-1">
+            <LockKeyhole
+              className="absolute top-1/2 -translate-y-1/2 left-3 w-4.5 h-4.5"
+              color="#919191"
+            />
+            <input
+              id="confirm_password"
+              name="confirm_password"
+              autoComplete="current-password"
+              className={cn(formInputStyling)}
+              type="password"
+              placeholder="Confirm Password"
+            />
+          </div>
           <div className="mt-4.5 flex gap-2 items-center">
-            <Checkbox />
-            <span className="font-suiss-regular  text-xs text-[#dedede]">
-              Stay logged in?
-            </span>
+            <a
+              href="/login"
+              className="font-suiss-regular  text-xs text-[#dedede] hover:underline cursor-pointer"
+            >
+              Already have an account?
+            </a>
           </div>
           <div className="mt-4 gap-4 flex">
-            <a
-            href="/register"
-              className="flex-1 min-h-10.5 font-matrix-small-caps-2 justify-center flex 
-            text-3xl bg-[#383737] rounded-md pb-1 text-[#c2c2c2] cursor-pointer
-            hover:bg-[#4a4a4a] hover:text-white transition-colors duration-100"
-            >
-              Register
-            </a>
-
             <button
               className="flex-1 min-h-10.5 font-matrix-small-caps-2
             text-3xl bg-button-purple rounded-md pb-1 text-white-text cursor-pointer
             hover:bg-[#4a1a6b] hover:brightness-110 transition-all duration-100"
             >
-              Login
+              Register
             </button>
           </div>
         </form>
@@ -96,4 +117,4 @@ function LoginForm() {
   );
 }
 
-export default Login;
+export default Register;
