@@ -1,8 +1,8 @@
 import logo from "@images/Logo.png";
 import { Mail, LockKeyhole } from "lucide-react";
-import { cn } from "../../../utils/clsx"; 
-import { formInputStyling } from "../../../utils/styling"; 
-import { Checkbox } from "../../ui/Checkbox"; 
+import { cn } from "../../../utils/clsx";
+import { formInputStyling } from "../../../utils/styling";
+import { Checkbox } from "../../../ui/Checkbox";
 
 function Login() {
   return (

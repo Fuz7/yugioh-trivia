@@ -1,7 +1,6 @@
-import {  Outlet, } from "react-router";
-import "./App.css";
+import { Outlet } from "react-router";
 
-function App() {
+function AuthLayout() {
   return ( 
     <main className="bg-image w-full h-screen ">
       <Outlet></Outlet>
@@ -9,4 +8,4 @@ function App() {
   );
 }
 
-export default App;
+export default AuthLayout;

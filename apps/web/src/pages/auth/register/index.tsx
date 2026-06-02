@@ -1,8 +1,8 @@
 import logo from "@images/Logo.png";
 import { Mail, LockKeyhole, SquareUser } from "lucide-react";
 import { cn } from "../../../utils/clsx";
-import { formInputStyling } from "../../../utils/styling"; 
-import { Checkbox } from "../../ui/Checkbox";
+import { formInputStyling } from "../../../utils/styling";
+import { Checkbox } from "../../../ui/Checkbox";
 
 function Register() {
   return (
