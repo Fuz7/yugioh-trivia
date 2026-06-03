@@ -1,5 +1,16 @@
 {
   "name": "yugioh-trivia-api",
   "compatibility_date": "2026-06-01",
-  "main": "src/index.ts"
+  "main": "src/index.ts",
+  
+  "d1_databases": [
+    {
+      "migrations_dir": "./drizzle/migrations",
+      "binding": "DB",
+      "database_name": "yugioh-trivia-db",
+      "database_id": "a0e8bb5c-a5cd-4a87-ab46-3efc0c477356"
+    }
+  ]
+
+
 }

@@ -5,18 +5,25 @@
   "main": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "wrangler dev"
+    "dev": "wrangler dev",
+    "generate-types": "wrangler types",
+    "db:create": "wrangler d1 create yugioh-trivia-db",
+    "db:generate": "drizzle-kit generate",
+    "db:apply": "drizzle-kit push",
+    "db:push:local": "npx wrangler d1 migrations apply DB --local"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "hono": "^4.12.23",
-    "wrangler": "^4.95.0"
+    "@app/shared": "workspace:*",
+    "drizzle-orm": "^0.45.2",
+    "hono": "^4.12.23"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20260531.1",
-    "tsx": "^4.22.3"
+    "drizzle-kit": "^0.31.10",
+    "tsx": "^4.22.3",
+    "wrangler": "^4.95.0"
   }
 }

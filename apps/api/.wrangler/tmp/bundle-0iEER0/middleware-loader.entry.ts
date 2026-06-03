@@ -3,12 +3,12 @@
 // export dynamically through wrangler, or we can potentially let users directly
 // add them as a sort of "plugin" system.
 
-import ENTRY, { __INTERNAL_WRANGLER_MIDDLEWARE__ } from "/home/fuz7/projects/yugioh-trivia/apps/api/.wrangler/tmp/bundle-hd92XD/middleware-insertion-facade.js";
-import { __facade_invoke__, __facade_register__, Dispatcher } from "/home/fuz7/projects/yugioh-trivia/node_modules/.pnpm/wrangler@4.95.0_@cloudflare+workers-types@4.20260531.1/node_modules/wrangler/templates/middleware/common.ts";
-import type { WorkerEntrypointConstructor } from "/home/fuz7/projects/yugioh-trivia/apps/api/.wrangler/tmp/bundle-hd92XD/middleware-insertion-facade.js";
+import ENTRY, { __INTERNAL_WRANGLER_MIDDLEWARE__ } from "/home/fuz7/projects/yugioh-trivia/apps/api/.wrangler/tmp/bundle-0iEER0/middleware-insertion-facade.js";
+import { __facade_invoke__, __facade_register__, Dispatcher } from "/home/fuz7/projects/yugioh-trivia/node_modules/.pnpm/wrangler@4.95.0/node_modules/wrangler/templates/middleware/common.ts";
+import type { WorkerEntrypointConstructor } from "/home/fuz7/projects/yugioh-trivia/apps/api/.wrangler/tmp/bundle-0iEER0/middleware-insertion-facade.js";
 
 // Preserve all the exports from the worker
-export * from "/home/fuz7/projects/yugioh-trivia/apps/api/.wrangler/tmp/bundle-hd92XD/middleware-insertion-facade.js";
+export * from "/home/fuz7/projects/yugioh-trivia/apps/api/.wrangler/tmp/bundle-0iEER0/middleware-insertion-facade.js";
 
 class __Facade_ScheduledController__ implements ScheduledController {
 	readonly #noRetry: ScheduledController["noRetry"];
