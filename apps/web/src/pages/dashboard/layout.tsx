@@ -1,6 +1,18 @@
-import { Outlet } from "react-router";
+import { Navigate, Outlet } from "react-router";
 import { CircleUserRound } from "lucide-react";
 import UserMenu from "../../ui/UserMenu";
+import useAuth from "../../hooks/auth";
+import type { PropsWithChildren } from "react";
+import PageLoader from "../../ui/Pageloader";
+
+function ProtectedRoute({ children }: PropsWithChildren) {
+  const { user, isFetchingUser } = useAuth();
+  if (isFetchingUser) return <PageLoader></PageLoader>;
+  if (!user) return <Navigate to="/login" replace />;
+  console.log(user);
+  return children;
+}
+
 function AppLayout() {
   return (
     <main className="bg-image w-full h-screen overflow-clip flex flex-col ">
@@ -12,5 +24,5 @@ function AppLayout() {
     </main>
   );
 }
-
+export { ProtectedRoute };
 export default AppLayout;

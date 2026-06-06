@@ -1,7 +1,10 @@
+html, body, #root {
+  background-color: #101010;
+
+}
 .bg-image{
   background-image: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80)),url('@images/bg-image.jpg');
   background-size: auto;
   background-position: center;
-  
 }
 

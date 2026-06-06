@@ -1,16 +1,15 @@
-
 type CheckboxProps = {
   label?: string;
-  defaultChecked?: boolean;
+  checked?: boolean;
   onChange?: (checked: boolean) => void;
 };
 
-export function Checkbox({ label, defaultChecked, onChange }: CheckboxProps) {
+export function Checkbox({ label, checked, onChange }: CheckboxProps) {
   return (
     <label className="flex items-center gap-3 cursor-pointer select-none">
       <input
         type="checkbox"
-        defaultChecked={defaultChecked}
+        checked={checked}
         onChange={(e) => onChange?.(e.target.checked)}
         className="peer sr-only"
       />
@@ -37,7 +36,11 @@ export function Checkbox({ label, defaultChecked, onChange }: CheckboxProps) {
           />
         </svg>
       </div>
-      {label && <span className="text-sm text-zinc-200">{label}</span>}
+      {label && (
+        <span className="text-sm font-suiss-regular text-zinc-200">
+          {label}
+        </span>
+      )}
     </label>
   );
 }

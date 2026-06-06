@@ -43,6 +43,8 @@
   --color-icon: #919191;
   --color-navbar: #101010;
   --color-button-purple:#351455;
+  --color-errorBorder:#F85149;
+  --color-errorBackground:#F85149;
   --font-matrixIIBold: 'matrixIIBold', sans-serif;
   --font-suiss-regular: 'suiss-regular', sans-serif;
   --font-suiss-medium: 'suiss-medium', sans-serif;

@@ -1,13 +1,6 @@
+import api from "../../utils/axios";
 
-
-export async function getCurrentUser(){
-  const res = await fetch("/api/users/me",{
-    credentials:"include",
-
-  })
-
-  if(!res.ok){
-    return null;
-  }
-  return res.json()
+export async function getMe() {
+  const { data: result } = await api.get("/api/users/me", {});
+  return result;
 }

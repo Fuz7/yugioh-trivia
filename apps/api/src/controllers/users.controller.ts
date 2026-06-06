@@ -1,13 +1,10 @@
 import type { Context } from "hono";
+import type { AppContext } from "../types/config";
 
-const getUser = (c:Context) => {
-  const payload = c.get("jwtPayload")
-  return c.json(payload)
-}
-
-const usersController = {
-  getUser,
-}
-
-export default usersController
-
+export const usersController = {
+  getUser(c: Context<AppContext>) {
+    const { exp, ...user } = c.get("jwtPayload") as any;
+    return c.json(user);
+  },
+};
+export default usersController;

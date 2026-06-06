@@ -6,6 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "wrangler dev",
+    "dev:host": "wrangler dev --ip 0.0.0.0",
+    "debug": "wrangler dev --inspector-port 9229",
     "generate-types": "wrangler types",
     "db:create": "wrangler d1 create yugioh-trivia-db",
     "db:generate": "drizzle-kit generate",
